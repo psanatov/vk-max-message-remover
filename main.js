@@ -1,9 +1,8 @@
-function parseVideoTitles() {
+function parseMessages() {
   document.querySelectorAll("[data-peer = '291528198']").forEach(e => e.parentNode.removeChild(e));
-
 }
 
-parseVideoTitles();
+parseMessages();
 
 var targetNode = document.getElementsByTagName('body')[0];
 
@@ -11,7 +10,7 @@ var config = { attributes: true, childList: true, subtree: true };
 var callback = function (mutationsList, observer) {
   for (var mutation of mutationsList) {
     if (mutation.type == 'childList') {
-      parseVideoTitles();
+      parseMessages();
     }
   }
 };
