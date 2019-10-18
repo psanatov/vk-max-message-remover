@@ -1,0 +1,19 @@
+  {
+    "name": "MAX MESSAGE REMOVER",
+    "version": "1.0",
+    "description": "YOBA",
+    "icons": {
+      "128": "icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://vk.com/*"],
+        "js": ["main.js"]
+      }
+    ],
+    "permissions": [
+      "storage", 
+      "activeTab"
+    ],
+    "manifest_version": 2
+  }
